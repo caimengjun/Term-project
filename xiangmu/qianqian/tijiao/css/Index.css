@@ -1,0 +1,145 @@
+/*body {
+    font: 14px/1 Lucida Grande, 'Microsoft YaHei', "Lucida Grande", "Lucida Sans Unicode", Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;
+    margin: 0;
+    padding: 0;
+}*/
+
+
+/*导航栏*/
+
+.logo {
+    margin-top: 0px;
+}
+
+.navbar {
+    height: 100px;
+    background-color: rgba(200,200, 200, 0.5);
+    border: white;
+}
+
+.nav>li>a:hover {
+    border-top: 2px solid #65bbf4;
+}
+
+.nav {
+    margin-top: 20px;
+}
+
+.nav li {
+    font-size: 18px;
+    float: left;
+    position: relative;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.dropdown-menu li {
+    font-size: 15px;
+    float: none;
+    position: relative;
+    text-align: left;
+    margin-left: 0px;
+}
+
+.navbar-form {
+    float: left;
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 250px;
+    padding: 0px;
+}
+
+
+/* 登入注册 */
+
+/* .siteHLoginBox {
+    margin-top: 35px;
+    float: right;
+    background-color: yellow;
+}
+
+.siteHLoginBox a {
+    color: #50abf2;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+
+.siteHLoginBox a:hover {
+    text-decoration: underline;
+}
+
+.siteHLoginBox .line {
+    margin: 9px 6px 0;
+    height: 12px;
+    width: 1px;
+    float: left;
+    background-color: #cfcfcf;
+}
+ */
+
+/*首页添加三方登陆*/
+
+.other-login {
+    float: left;
+    margin-top: 35px;
+    margin-left: 15px;
+}
+
+.other-login a {
+    float: left;
+    width: 28px;
+    height: 28px;
+    margin-right: 6px;
+}
+
+.other-login a,
+.other-login a:hover {
+    background: url(http://localhost/xm/images/other_login.png);
+}
+
+.other-login .wechat {
+    background-position: -34px 0;
+}
+
+.other-login .sina {
+    background-position: -68px 0;
+}
+
+.other-login .qq:hover {
+    background-position: -100px 0;
+}
+
+.other-login .wechat:hover {
+    background-position: -134px 0;
+}
+
+.other-login .sina:hover {
+    background-position: -168px 0;
+}
+
+a.wdfq.btn_ALink.my-zc.fr:hover {
+    color: #6fbdfc;
+    border-color: #6fbdfc;
+}
+
+.my-zc {
+    margin: 20px 22px 0 0;
+    border: 1px solid #51aaf2;
+    display: inline-block;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 14px;
+    color: #51aaf2;
+    height: 28px;
+    line-height: 28px;
+    width: 88px;
+    background-color: #fff;
+}
+
+.my-zc:hover {
+    color: #51aaf2;
+    background-color: white;
+}
+
+

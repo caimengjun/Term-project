@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/detail.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/comment.css">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/jquery.tmpl.js"></script>
+    <script src="js/details.js"></script>
+    <script src="js/genxin.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/index_1.js"></script>
+    <script type="text/javascript" src="js/bootstrap,min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/smoothness/jquery.ui.css" type="text/css" />
+    <link rel="stylesheet" href="css/style_1.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top navbar-transparent " role="navigation">
+            <div class="container  ">
+                <div class="navbar-header  ">
+                    <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#example-navbar-collapse">
+                          <span class="sr-only">切换导航</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                        </button>
+                    <a class="navbar-brand" href="index.html"><img class="logo img-responsive" src="logo/logo.png"></a>
+                </div>
+                <div class="collapse navbar-collapse " id="example-navbar-collapse">
+                    <ul class="nav navbar-nav ">
+                        <li>
+                            <a href="index.html"><span>首页</span></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">浏览项目 <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">股权</a>
+                                </li>
+                                <li>
+                                    <a href="#">消费</a>
+                                </li>
+                                <li>
+                                    <a href="#">收益权</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="#">浏览全部</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="header_member">
+                        <a href="javascript:void(0)" id="login_a">登录</a>
+                        <a href="javascript:void(0)" id="member">用户</a>
+                        <span class="line">|</span>
+                        <a href="javascript:void(0)" id="reg_a">注册</a>
+                        <a href="javascript:void(0)" id="logout">退出</a>
+                    </div>
+                    <div class="other-login">
+                        <a class="qq" href="#"></a>
+                        <a class="wechat" href="#"></a>
+                        <a class="sina" href="#"></a>
+                    </div>
+                    <form class="navbar-form" action="sousuo.html" method="get">
+                        <div class="form-group">
+                            <input id="sousuokuang" type="text" name="sousuo" value="" class="form-control" placeholder="请输入关键词">
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <div id="da">
+            <img id="logo" class="img-responsive img-circle pull-left" src="">
+            <h3><span id="biaoti"></span></h3>
+            <div>
+                <h5 id="ni" class="pull-left">发起人&nbsp;&nbsp;</h5>
+                <h4 id="item" class="pull-left"><span id="Initiator"></span>&nbsp;</h4>
+                <button type="button" id="lianxi" class="btn btn-default btn-xs ">联系我</button>
+            </div>
+            <hr/>
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 pull-left">
+                    <img id="tupian" class="img-responsive " src="">
+                    <hr>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 pull-right">
+                    <h3><span id="zhichizheshumu"></span>支持数</h3>
+                    <br/>
+                    <h3><span id="yichoujine"></span>已筹款($)</h3>
+                    <br/>
+                    <div class="progress progress-striped active">
+                        <div id="jindutiao" class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                            <h4 id="weizhi" class="pull-right"><span id="baifenbi"></span>%</h4>
+                        </div>
+                    </div>
+                    <h4 class="pull-left">剩余2天</h4>
+                    <h4 class="pull-right">目标筹资$<span id="mubiaojine"></span></h4>
+                    <br>
+                    <br>
+
+                    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal">立即支持</button>
+
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+
+                                </div>
+                                <div class="modal-body">
+                                    <form action="php/exchange.php" method="post">
+
+                                        请选择你要投资的币种:
+                                        <label for="currency"></label>
+                                        <select name="currency">
+												<OPTION value="currency_1">人民币</OPTION>
+												<OPTION value="currency_2">欧元</OPTION>
+												<OPTION value="currency_3">美元</OPTION>
+											</select>
+                                        <br> 请输入金额：
+                                        <input name="money" type="text" placeholder="请输入金额">
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+				</button>
+                                            <button type="submit" name="submit" class="btn btn-primary " id="submit">
+					确认支持
+				</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal -->
+                    </div>
+                    <nav id="nav1">
+
+                        <span class="glyphicon glyphicon-flag" id="guanjianzi"></span>
+
+                        <!--						
+							<span class="glyphicon glyphicon-tag" id="guanjianzi"></span>
+						
+						
+							<span class="glyphicon glyphicon-map-marker" id="guanjianzi"></span>-->
+
+                    </nav>
+                </div>
+                <div class="col-xs-12 col-sm-12 ">
+                    <br>
+
+                    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+                        <div class="container-fluid">
+                            <div id="box" class="box">
+                                <button id="button1" type="button" class="btn btn-default navbar-btn"><span id="span1"><a href="#section-1" id="anniu">项目详情</a></span></button>
+                                <button id="button1" type="button" class="btn btn-default navbar-btn"><span id="span1"><a href="#section-2" id="anniu">项目更新</a></span></button>
+                                <button id="button1" type="button" class="btn btn-default navbar-btn"><span id="span1"><a href="#section-3" id="anniu">评论</a></span></button>
+                                <button id="button1" type="button" class="btn btn-default navbar-btn"><span id="span1"><a href="#section-4" id="anniu">支持记录</a></span></button>
+                            </div>
+                        </div>
+                    </nav>
+
+                </div>
+                <div class="col-xs-12 col-sm-8">
+                    <h2 id="section-1">项目详情</h2>
+                    <img class="img-responsive center-block" src="picture/5ae9d211ce0491a_t4_1575x2362_thumb_670x0.jpg" />
+                    <img class="img-responsive center-block" src="picture/5ae9d21b116201a_t4_1575x2362_thumb_670x0.jpg" />
+                    <img class="img-responsive center-block" src="picture/5ae9d22441f2f1a_t4_1575x2362_thumb_670x0.jpg" />
+                    <img class="img-responsive center-block" src="picture/5ae9d2688649d1a_t4_1575x2362_thumb_670x0.jpg" />
+                    <img class="img-responsive center-block" src="picture/5ae9d272abe9d1a_t4_1575x2362_thumb_670x0.jpg" />
+                    <img class="img-responsive center-block" src="picture/5ae9d27a20f701a_t4_1575x4724_thumb_670x0.jpg" />
+                    <img class="img-responsive center-block" src="picture/5ae9d287f242e1a_t4_1575x2733_thumb_670x0.jpg" />
+                    <img class="img-responsive center-block" src="picture/5aea6e854b4ea_1366x768_thumb_670x0.jpg" />
+                    <hr>
+                    <h2 id="section-2">项目更新</h2>
+                    <h3><span id="time" class="pull-left"></span>:</h3>
+                    <h3 id="faqiren2" class="pull-left"><span id="faqiren"></span>&nbsp;&nbsp;</h3>
+                    <br>
+                    <span id="neirong"></span>
+
+                    <hr>
+                    <h2 id="section-3">评论</h2>
+
+                    <div class="commentAll">
+                        <!--评论区域 begin-->
+                        <div class="reviewArea clearfix">
+                            <textarea class="content comment-input" placeholder="Please enter a comment&hellip;" onkeyup="keyUP(this)"></textarea>
+                            <a href="javascript:;" class="plBtn">评论</a>
+                        </div>
+                        <!--评论区域 end-->
+                        <!--回复区域 begin-->
+                        <div class="comment-show">
+                            <div class="comment-show-con clearfix">
+                                <div class="comment-show-con-img pull-left"><img src="images/header-img-comment_03.png" alt=""></div>
+                                <div class="comment-show-con-list pull-left clearfix">
+                                    <div class="pl-text clearfix">
+                                        <a href="#" class="comment-size-name">张三 : </a>
+                                        <span class="my-pl-con">&nbsp;项目不错，我要大力支持!</span>
+                                    </div>
+                                    <div class="date-dz">
+                                        <span class="date-dz-left pull-left comment-time">2017-5-2 11:11:39</span>
+                                        <div class="date-dz-right pull-right comment-pl-block">
+                                            <a href="javascript:;" class="removeBlock">删除</a>
+                                            <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a>
+                                            <span class="pull-left date-dz-line">|</span>
+                                            <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num">666</i>)</a>
+                                        </div>
+                                    </div>
+                                    <div class="hf-list-con"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--回复区域 end-->
+                    </div>
+
+                    <hr>
+                    <h2 id="section-4">支持记录</h2>
+                    <table class="table table-striped">
+
+                        <thead>
+                            <tr>
+                                <th>支持者</th>
+                                <th>支持金额($)</th>
+                                <th>支持时间</th>
+                            </tr>
+                        </thead>
+                        <tbody id="rows">
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="col-xs-12 col-sm-4 ">
+                    <div id="box2">
+                        <form id="form1">
+                            <p>
+                                <h4><b>无私支持</b></h4>17 人</p>
+                            <p>感谢您的无私奉献，这份支持将助我们的梦想飞的更高更远。</p>
+                            <input id="qian1" class="btn btn-default" type="button" value="$1">
+                            <input id="qian2" class="btn btn-default" type="button" value="$5">
+                            <input id="qian3" class="btn btn-default" type="button" value="$10">
+                            <br/>
+                            <br/>
+                            <input type="text" class="form-control" id="name" placeholder="其他$">
+                            <br/>
+                            <button type="button" class="btn btn-primary btn-primary btn-block" id="ceshi">立即支持</button>
+
+                            <hr id="fen">
+
+                            <div>
+                                <h3><b>$1</b>
+                                    <h5>97 人</h5>
+                                </h3>
+                                <div><b>支持1美元+1次中奖机会</b></div>
+                                <br/>
+                                <p>众筹成功结束后，每满200人，由众筹网官方抽出1名幸运用户获得价值99元的号《沉淀清沙》画册一本。</p>
+                                <hr/>
+                                <div>
+                                    <p>已发放抽奖号：<b>97</b>个</p>
+                                    <p>预计奖品发送时间：<b>开奖后15天内</b></p>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-primary btn-block">支持$1</button>
+                            </div>
+                            <hr id="fen">
+                            <div>
+                                <h3><b>$59</b>
+                                    <h5>97 人</h5>
+                                </h3>
+                                <div><b>支持59美元</b></div>
+                                <br/>
+                                <p>您将得到：价值99美元的《沉淀清沙》画册一本</p>
+                                <hr/>
+                                <div>
+                                    <p>预计回报发送时间：<b>项目成功结束后15天内</b></p>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-primary btn-block">支持$59</button>
+                            </div>
+                            <hr id="fen">
+                            <div>
+                                <h3><b>$99</b>
+                                    <h5>97 人</h5>
+                                </h3>
+                                <div><b>支持99美元</b></div>
+                                <br/>
+                                <p>您将得到：价值99元的《沉淀清沙》画册一本+价值12美元的《成电映像》明信片一套</p>
+                                <hr/>
+                                <div>
+                                    <p>预计回报发送时间：<b>项目成功结束后15天内</b></p>
+                                </div>
+                                <button type="button" class="btn btn-primary btn-primary btn-block">支持$99</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="box3">
+                        <div id="nei">
+                            <h3><b>联系我们</b></h3>
+                            <span class="glyphicon glyphicon-user "></span>发起人
+                            <h5>潘宇翔</h5>
+                            <hr>
+                            <span class="glyphicon glyphicon-earphone"></span>联系电话
+                            <h5>13299916572</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 底部 -->
+        <div class="siteFooterBox container">
+            <div class="mainInnerBox">
+                <div class="siteMFooter">
+                    <div class="siteMFooterABox">
+                        <a href="#" rel="nofollow" class="site_hoverCss3A" target="_blank">关于我们</a><span>|</span>
+                        <a href="#" rel="nofollow" class="site_hoverCss3A" target="_blank">联系我们</a><span>|</span>
+                        <a href="#" rel="nofollow" class="site_hoverCss3A" target="_blank">服务协议</a><span>|</span>
+                        <a href="#" rel="nofollow" class="site_hoverCss3A" target="_blank">项目发起规范</a><span>|</span>
+                        <a href="#" rel="nofollow" class="site_hoverCss3A" target="_blank">公司资质</a><span>|</span>
+                        <a href="#" class="site_hoverCss3A" target="_blank">帮助中心</a>
+                    </div>
+                </div>
+            </div>
+            <div class="siteBFooter">
+                <p class="siteBFooter_p">©2018 钱钱网络科技有限公司 qianqian.com 版权所有 京ICP证666666号 | 出版物经营许可证编号新出发（京）批字第直666666号 |
+                    <a class="guohui" target="_blank" href="#">京公网安备666666号</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/jquery.flexText.js"></script>
+    <!--textarea高度自适应-->
+    <script type="text/javascript">
+        $(function() {
+            $('.content').flexText();
+        });
+    </script>
+    <!--textarea限制字数-->
+    <script type="text/javascript">
+        function keyUP(t) {
+            var len = $(t).val().length;
+            if (len > 139) {
+                $(t).val($(t).val().substring(0, 140));
+            }
+        }
+    </script>
+    <!--点击评论创建评论条-->
+    <script type="text/javascript">
+        $('.commentAll').on('click', '.plBtn', function() {
+            var myDate = new Date();
+            //获取当前年
+            var year = myDate.getFullYear();
+            //获取当前月
+            var month = myDate.getMonth() + 1;
+            //获取当前日
+            var date = myDate.getDate();
+            var h = myDate.getHours(); //获取当前小时数(0-23)
+            var m = myDate.getMinutes(); //获取当前分钟数(0-59)
+            if (m < 10) m = '0' + m;
+            var s = myDate.getSeconds();
+            if (s < 10) s = '0' + s;
+            var now = year + '-' + month + "-" + date + " " + h + ':' + m + ":" + s;
+            //获取输入内容
+            var oSize = $(this).siblings('.flex-text-wrap').find('.comment-input').val();
+            console.log(oSize);
+            //动态创建评论模块
+            oHtml = '<div class="comment-show-con clearfix"><div class="comment-show-con-img pull-left"><img src="images/header-img-comment_03.png" alt=""></div> <div class="comment-show-con-list pull-left clearfix"><div class="pl-text clearfix"> <a href="#" class="comment-size-name">David Beckham : </a> <span class="my-pl-con">&nbsp;' + oSize + '</span> </div> <div class="date-dz"> <span class="date-dz-left pull-left comment-time">' + now + '</span> <div class="date-dz-right pull-right comment-pl-block"><a href="javascript:;" class="removeBlock">删除</a> <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a> <span class="pull-left date-dz-line">|</span> <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num">666</i>)</a> </div> </div><div class="hf-list-con"></div></div> </div>';
+            if (oSize.replace(/(^\s*)|(\s*$)/g, "") != '') {
+                $(this).parents('.reviewArea ').siblings('.comment-show').prepend(oHtml);
+                $(this).siblings('.flex-text-wrap').find('.comment-input').prop('value', '').siblings('pre').find('span').text('');
+            }
+        });
+    </script>
+    <!--点击回复动态创建回复块-->
+    <script type="text/javascript">
+        $('.comment-show').on('click', '.pl-hf', function() {
+            //获取回复人的名字
+            var fhName = $(this).parents('.date-dz-right').parents('.date-dz').siblings('.pl-text').find('.comment-size-name').html();
+            //回复@
+            var fhN = '回复@' + fhName;
+            //var oInput = $(this).parents('.date-dz-right').parents('.date-dz').siblings('.hf-con');
+            var fhHtml = '<div class="hf-con pull-left"> <textarea class="content comment-input hf-input" placeholder="" onkeyup="keyUP(this)"></textarea> <a href="javascript:;" class="hf-pl">评论</a></div>';
+            //显示回复
+            if ($(this).is('.hf-con-block')) {
+                $(this).parents('.date-dz-right').parents('.date-dz').append(fhHtml);
+                $(this).removeClass('hf-con-block');
+                $('.content').flexText();
+                $(this).parents('.date-dz-right').siblings('.hf-con').find('.pre').css('padding', '6px 15px');
+                //console.log($(this).parents('.date-dz-right').siblings('.hf-con').find('.pre'))
+                //input框自动聚焦
+                $(this).parents('.date-dz-right').siblings('.hf-con').find('.hf-input').val('').focus().val(fhN);
+            } else {
+                $(this).addClass('hf-con-block');
+                $(this).parents('.date-dz-right').siblings('.hf-con').remove();
+            }
+        });
+    </script>
+    <!--评论回复块创建-->
+    <script type="text/javascript">
+        $('.comment-show').on('click', '.hf-pl', function() {
+            var oThis = $(this);
+            var myDate = new Date();
+            //获取当前年
+            var year = myDate.getFullYear();
+            //获取当前月
+            var month = myDate.getMonth() + 1;
+            //获取当前日
+            var date = myDate.getDate();
+            var h = myDate.getHours(); //获取当前小时数(0-23)
+            var m = myDate.getMinutes(); //获取当前分钟数(0-59)
+            if (m < 10) m = '0' + m;
+            var s = myDate.getSeconds();
+            if (s < 10) s = '0' + s;
+            var now = year + '-' + month + "-" + date + " " + h + ':' + m + ":" + s;
+            //获取输入内容
+            var oHfVal = $(this).siblings('.flex-text-wrap').find('.hf-input').val();
+            console.log(oHfVal)
+            var oHfName = $(this).parents('.hf-con').parents('.date-dz').siblings('.pl-text').find('.comment-size-name').html();
+            var oAllVal = '回复@' + oHfName;
+            if (oHfVal.replace(/^ +| +$/g, '') == '' || oHfVal == oAllVal) {
+
+            } else {
+                $.getJSON("json/pl.json", function(data) {
+                    var oAt = '';
+                    var oHf = '';
+                    $.each(data, function(n, v) {
+                        delete v.hfContent;
+                        delete v.atName;
+                        var arr;
+                        var ohfNameArr;
+                        if (oHfVal.indexOf("@") == -1) {
+                            data['atName'] = '';
+                            data['hfContent'] = oHfVal;
+                        } else {
+                            arr = oHfVal.split(':');
+                            ohfNameArr = arr[0].split('@');
+                            data['hfContent'] = arr[1];
+                            data['atName'] = ohfNameArr[1];
+                        }
+
+                        if (data.atName == '') {
+                            oAt = data.hfContent;
+                        } else {
+                            oAt = '回复<a href="#" class="atName">@' + data.atName + '</a> : ' + data.hfContent;
+                        }
+                        oHf = data.hfName;
+                    });
+
+                    var oHtml = '<div class="all-pl-con"><div class="pl-text hfpl-text clearfix"><a href="#" class="comment-size-name">我的名字 : </a><span class="my-pl-con">' + oAt + '</span></div><div class="date-dz"> <span class="date-dz-left pull-left comment-time">' + now + '</span> <div class="date-dz-right pull-right comment-pl-block"> <a href="javascript:;" class="removeBlock">删除</a> <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a> <span class="pull-left date-dz-line">|</span> <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num">666</i>)</a> </div> </div></div>';
+                    oThis.parents('.hf-con').parents('.comment-show-con-list').find('.hf-list-con').css('display', 'block').prepend(oHtml) && oThis.parents('.hf-con').siblings('.date-dz-right').find('.pl-hf').addClass('hf-con-block') && oThis.parents('.hf-con').remove();
+                });
+            }
+        });
+    </script>
+    <!--删除评论块-->
+    <script type="text/javascript">
+        $('.commentAll').on('click', '.removeBlock', function() {
+            var oT = $(this).parents('.date-dz-right').parents('.date-dz').parents('.all-pl-con');
+            if (oT.siblings('.all-pl-con').length >= 1) {
+                oT.remove();
+            } else {
+                $(this).parents('.date-dz-right').parents('.date-dz').parents('.all-pl-con').parents('.hf-list-con').css('display', 'none')
+                oT.remove();
+            }
+            $(this).parents('.date-dz-right').parents('.date-dz').parents('.comment-show-con-list').parents('.comment-show-con').remove();
+
+        })
+    </script>
+    <!--点赞-->
+    <script type="text/javascript">
+        $('.comment-show').on('click', '.date-dz-z', function() {
+            var zNum = $(this).find('.z-num').html();
+            if ($(this).is('.date-dz-z-click')) {
+                zNum--;
+                $(this).removeClass('date-dz-z-click red');
+                $(this).find('.z-num').html(zNum);
+                $(this).find('.date-dz-z-click-red').removeClass('red');
+            } else {
+                zNum++;
+                $(this).addClass('date-dz-z-click');
+                $(this).find('.z-num').html(zNum);
+                $(this).find('.date-dz-z-click-red').addClass('red');
+            }
+        })
+    </script>
+</body>
+<script id="myTemplate" type="text/x-jquery-tmpl">
+    <tr>
+        <td>${name}</td>
+        <td>${jine}</td>
+        <td>${time}</td>
+    </tr>
+</script>
+
+</html>

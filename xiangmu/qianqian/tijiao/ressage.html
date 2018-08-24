@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ressage.css">
+    <script type="text/javascript"></script>
+
+
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--    <link rel="stylesheet"  href="css/normalize.css" />-->
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+    <link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css" />
+
+    <link rel="stylesheet" href="css/btn.css" />
+
+    <link href="css/city-picker.css" rel="stylesheet" type="text/css" />
+
+    <!--	<link href="css/drag.css" rel="stylesheet" type="text/css"/>-->
+
+    <!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/Index.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+    <script type="text/javascript" src="js/jquery.ui.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/smoothness/jquery.ui.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-transparent " role="navigation">
+        <div class="container  ">
+            <div class="navbar-header  ">
+                <button type="button" class="navbar-toggle " data-toggle="collapse" data-target="#example-navbar-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <a class="navbar-brand" href="index.html"><img class="logo img-responsive" src="logo/logo.png"></a>
+            </div>
+            <div class="collapse navbar-collapse " id="example-navbar-collapse">
+                <ul class="nav navbar-nav ">
+                    <li><a href="../index.html"><span>首页</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">浏览项目 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">股权</a></li>
+                            <li><a href="#">消费</a></li>
+                            <li><a href="#">收益权</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">浏览全部</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form">
+                    <div class="form-group">
+                        <input type="text" id="sousuo" class="form-control" placeholder="请输入关键词">
+                    </div>
+                    <button id="btn" type="button" class="btn btn-default">搜索</button>
+                </form>
+                <div class="other-login">
+                    <a class="qq" href="#"></a>
+                    <a class="wechat" href="#"></a>
+                    <a class="sina" href="#"></a>
+                </div>
+                <!--                <div class="siteHLoginBox clearfix">
+                                        <a href="#" id="dengru" class="siteH_login Js-showLogin">登录</a>
+                                        <span class="line"></span>
+                                        <a href="#" class="siteH_register Js-showRegister">注册</a>
+                                    </div>-->
+                <!--                    <div class="siteHLoginBox clearfix">
+                                            <a href="javascript:void(0)" id="reg_a">注册</a>
+                                            <a href="javascript:void(0)" id="member">用户</a>
+                                            |
+                                            <a href="javascript:void(0)" id="login_a">登录</a>
+                                            <a href="javascript:void(0)" id="logout">退出</a>
+                                        </div>-->
+                <div class="header_member">
+                    <a href="javascript:void(0)" id="reg_a">注册</a>
+                    <a href="javascript:void(0)" id="member">用户</a> |
+                    <a href="javascript:void(0)" id="login_a">登录</a>
+                    <a href="javascript:void(0)" id="logout">退出</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <form id="reg" action="123.html" title="会员注册">
+        <ol class="reg_error"></ol>
+        <p>
+            <label for="user">帐号：</label>
+            <input type="text" name="user" class="text" id="user" />
+            <span class="star">*</span>
+        </p>
+        <p>
+            <label for="pass">密码：</label>
+            <input type="password" name="pass" class="text" id="pass" />
+            <span class="star">*</span>
+        </p>
+        <p>
+            <label for="email">邮箱：</label>
+            <input type="text" name="email" class="text" id="email" />
+            <span class="star">*</span>
+        </p>
+        <p>
+            <label>性别：</label>
+            <input type="radio" name="sex" value="male" id="male" checked="checked"><label for="male">男</label></input><input type="radio" name="sex" value="female" id="female"><label for="female">女</label></input>
+        </p>
+        <p>
+            <label for="date">生日：</label>
+            <input type="text" name="birthday" readonly="readonly" class="text" id="date" />
+        </p>
+
+    </form>
+
+
+    <form id="login" title="会员登录">
+        <ol class="login_error"></ol>
+        <p>
+            <label for="user">帐号：</label>
+            <input type="text" name="login_user" class="text" id="login_user" />
+            <span class="star">*</span>
+        </p>
+        <p>
+            <label for="pass">密码：</label>
+            <input type="password" name="login_pass" class="text" id="login_pass" />
+            <span class="star">*</span>
+        </p>
+        <p>
+            <input type="checkbox" name="expires" id="expires" checked="checked" /><label for="expires">登录后有效期一周</label>
+        </p>
+
+    </form>
+
+
+    <div id="loading">数据交互中...</div>
+
+    <div class="container" style="margin-top: 120px;">
+        <!--        <div class="row">
+                                <div class="col-sm-12 col-md-12 ">-->
+        <form action="ressage_post.php" method="post" enctype="multipart/form-data">
+            <!--<div class="form-group">-->
+
+
+
+
+            <div class="id">
+                <label for="id">项目ID</label>
+                <br>
+                <hr>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-user"></span>
+                    </span>
+                    <input name="id" class="form-control" placeholder="输入项目ID" maxlength="20" type="text" value="">
+                </div>
+            </div>
+
+
+            <hr>
+            <br>
+            <div class="biaoti">
+                <label for="biaoti">项目标题</label>
+                <br>
+                <hr>
+                <!-- <div class="input input--haruki" style="position: relative;margin-left: 15%;">
+                    
+                        <input class="input__field input__field--haruki" type="text" id="input-1" name="biaoti" />
+                        <label class="input__label input__label--haruki" for="input-1">
+                            <span class="input__label-content input__label-content--haruki">请输入项目标题</span>
+                        </label>
+                    </div> -->
+
+                <div class="input-group">
+                    <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                    </span>
+                    <input name="biaoti" class="form-control" placeholder="输入项目标题" maxlength="20" type="text" value="">
+                </div>
+            </div>
+            <!-- <script src="js/classie.js"></script>
+                <script>
+                    (function () {
+                        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+                        if (!String.prototype.trim) {
+                            (function () {
+                                // Make sure we trim BOM and NBSP
+                                var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                                String.prototype.trim = function () {
+                                    return this.replace(rtrim, '');
+                                };
+                            })();
+                        }
+                
+                        [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+                            // in case the input is already filled..
+                            if (inputEl.value.trim() !== '') {
+                                classie.add(inputEl.parentNode, 'input--filled');
+                            }
+                
+                            // events:
+                            inputEl.addEventListener('focus', onInputFocus);
+                            inputEl.addEventListener('blur', onInputBlur);
+                        });
+                
+                        function onInputFocus(ev) {
+                            classie.add(ev.target.parentNode, 'input--filled');
+                        }
+                
+                        function onInputBlur(ev) {
+                            if (ev.target.value.trim() === '') {
+                                classie.remove(ev.target.parentNode, 'input--filled');
+                            }
+                        }
+                    })();
+                </script> -->
+
+
+            <hr>
+            <br>
+            <div class="miaoshu">
+                <label for="miaoshu">筹款目的</label>
+                <br>
+                <hr>
+                <!-- <div class="input input--haruki" style="position: relative;margin-left: 15%;">
+                    
+                        <input class="input__field input__field--haruki" type="text" id="input-1" name="miaoshu" />
+                        <label class="input__label input__label--haruki" for="input-1">
+                            <span class="input__label-content input__label-content--haruki">一句话简单介绍下您的项目吧</span>
+                        </label>
+                    </div> -->
+                <div class="input-group">
+                    <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-film"></span>
+                    </span>
+                    <input name="miaoshu" class="form-control" placeholder="输入项目描述" maxlength="20" type="text" value="">
+                </div>
+            </div>
+            <!-- <script src="js/classie.js"></script>
+                <script>
+                    (function () {
+                        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+                        if (!String.prototype.trim) {
+                            (function () {
+                                // Make sure we trim BOM and NBSP
+                                var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                                String.prototype.trim = function () {
+                                    return this.replace(rtrim, '');
+                                };
+                            })();
+                        }
+                
+                        [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+                            // in case the input is already filled..
+                            if (inputEl.value.trim() !== '') {
+                                classie.add(inputEl.parentNode, 'input--filled');
+                            }
+                
+                            // events:
+                            inputEl.addEventListener('focus', onInputFocus);
+                            inputEl.addEventListener('blur', onInputBlur);
+                        });
+                
+                        function onInputFocus(ev) {
+                            classie.add(ev.target.parentNode, 'input--filled');
+                        }
+                
+                        function onInputBlur(ev) {
+                            if (ev.target.value.trim() === '') {
+                                classie.remove(ev.target.parentNode, 'input--filled');
+                            }
+                        }
+                    })();
+                </script> -->
+
+
+            <hr>
+            <br>
+            <div class="form-group has-feedback">
+                <label for="guanjianzi">关键字</label>
+                <hr>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-cloud"></span>
+                    </span>
+                    <input name="guanjianzi" class="form-control" placeholder="给您的项目设置一些个性标签，让用户更容易搜索到" maxlength="20" type="text" value="">
+                </div>
+            </div>
+
+
+            <!--                <hr>
+                            <br>
+                            <div class="myfile" >
+                            <label for="myfile" >请选择您要上传的项目图片：</label>
+                            <br>
+                            <hr>
+                            <div style="position: relative;margin-left: 15%;">
+                            <input type="file" name='myfile' class="button button-pill button-tiny" />
+                            </div>
+                            </div>-->
+            <hr>
+            <br>
+            <div class="tupian">
+                <label for="tupian">请选择您要上传的文件：</label>
+                <hr>
+                <input type="file" name='myfile' class="button button-glow button-border button-rounded button-primary" />
+            </div>
+
+            <!--  <hr>
+                <br>
+                <div class="logo">
+                    <label for="logo">请选择您要上传的logo：</label>
+                    <hr>
+                    <input type="file" name='logo' class="button button-glow button-border button-rounded button-primary"/>
+                </div> -->
+
+            <hr>
+            <br>
+            <div class="form-group has-feedback">
+                <label for="mubiaojine">目标金额</label>
+                <hr>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-th-list"></span>
+                    </span>
+                    <input name="mubiaojine" class="form-control" placeholder="输入您需要筹集的目标资金数额" maxlength="20" type="text" value="">
+                </div>
+            </div>
+            <!--                
+                            <hr>
+                            <br>
+                            <div class="logo" >
+                            <label for="logo" >请选择您要上传的LOGO：</label>
+                            <br>
+                            <hr>
+                            <div style="position: relative;margin-left: 15%;">
+                            <input type="file" name='logo' class="button button-pill button-tiny" />
+                            </div>
+                            </div>-->
+
+
+            <hr>
+            <br>
+            <div class="id">
+                <label for="lnitiator">项目发起人</label>
+                <br>
+                <hr>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-home"></span>
+                    </span>
+                    <input name="lnitiator" class="form-control" placeholder="输入项目发起人" maxlength="20" type="text" value="">
+                </div>
+            </div>
+
+            <!--                
+                            <hr>
+                            <br>
+                            <div class="form-group has-feedback">
+                                <label for="username">用户信息</label>
+                                <hr>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                    <input name="username" class="form-control" placeholder="输入中文姓名（需与开户时银行卡结算名一致）" maxlength="20" type="text" value="">
+                                </div>
+                                <br>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-cloud"></span></span>
+                                    <input name="shenfenzheng" class="form-control" placeholder="二代身份证，输入数字或字母" maxlength="20" type="text" value="">
+                                </div>
+                                <br>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                                    <input name="kefulianxiren" class="form-control" placeholder="客服联系人" maxlength="20" type="text" value="">
+                                </div>
+                                <br>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-bell"></span></span>
+                                    <input name="kefulianxidianhua" class="form-control" placeholder="客服联系电话" maxlength="20" type="text" value="">
+                                </div>
+                            </div>-->
+
+
+            <hr>
+            <br>
+            <div class="">
+                <label for="leixing">选择您要创建的项目类型</label>
+                <hr>
+                <div class="checkbox checkbox-primary">
+                    <input id="checkbox1" name="leixing[]" type="checkbox" value="公益">
+                    <label for="checkbox1">
+                            公益项目
+                        </label>
+                </div>
+
+                <div class="checkbox checkbox-primary">
+                    <input id="checkbox2" name="leixing[]" type="checkbox" value="区块链">
+                    <label for="checkbox2">
+                            区块链项目
+                        </label>
+                </div>
+                <div class="checkbox checkbox-success">
+                    <input id="checkbox3" name="leixing[]" type="checkbox" value="农业">
+                    <label for="checkbox3">
+                            农业项目
+                        </label>
+                </div>
+                <div class="checkbox checkbox-success">
+                    <input id="checkbox4" name="leixing[]" type="checkbox" value="出版">
+                    <label for="checkbox4">
+                            出版项目
+                        </label>
+                </div>
+                <div class="checkbox checkbox-info">
+                    <input id="checkbox5" name="leixing[]" type="checkbox" value="娱乐">
+                    <label for="checkbox5">
+                            娱乐项目
+                        </label>
+                </div>
+                <div class="checkbox checkbox-info">
+                    <input id="checkbox6" name="leixing[]" type="checkbox" value="其他">
+                    <label for="checkbox6">
+                            其他项目
+                        </label>
+                </div>
+            </div>
+
+            <!--                <hr>
+                            <br> 
+                            <div class="">
+                                <label for="diqu" >选择项目的地区</label>
+                                <hr>
+                                <div class="docs-methods">
+            
+                                    <div id="distpicker">
+                                        <div class="form-group">
+                                            <div style="position: relative;margin-left: 15%;">
+                                                <input name="diqu" id="city-picker3" class="form-control" readonly type="text" value="" data-toggle="city-picker">
+                                            </div>
+                                        </div>
+                                        <div class="form-group" style="position: relative;margin-left: 15%;">
+                                            <button class="btn btn-warning" id="reset" type="button">重置</button>
+                                            <button class="btn btn-danger" id="destroy" type="button">确定</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+
+
+
+
+            <hr>
+            <br>
+            <div class="form-group has-feedback">
+                <label for="choukuanzhouqi">筹款周期</label>
+                <hr>
+                <div class="input-group">
+                    <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-question-sign"></span>
+                    </span>
+                    <input name="choukuanzhouqi" class="form-control" placeholder="输入您需要筹资时间周期" maxlength="20" type="text" value="">
+                </div>
+            </div>
+
+
+
+            <hr>
+            <br>
+            <div class="xiangmugushi">
+                <label for="xiangmugushi">项目故事</label>
+                <br>
+                <hr>
+                <textarea name="xiangmugushi" value="" class="form-control" rows="6" placeholder="告诉支持者，你美妙的理想或残酷的现实，为什么需要大家的支持"></textarea>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <br>
+            <hr>
+            <div class="form-group">
+                <label for="name">备注</label>
+                <br>
+                <hr>
+                <textarea name="beizhu" value="" class="form-control" rows="3"></textarea>
+            </div>
+
+
+
+            <div class="denglu">
+                <div class="">
+                    <button type="submit" class="button button-glow button-border button-rounded button-primary">登录</button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </form>
+        <!--            </div>
+                            </div>-->
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

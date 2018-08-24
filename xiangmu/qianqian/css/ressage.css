@@ -1,0 +1,45 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2018-6-6, 11:17:50
+    Author     : acer
+*/
+/*.right{
+   position:relative;
+   float: right;
+   background-color:#cccccc;
+   width: 65%;
+   
+}*/
+
+.container{
+      
+  
+    
+    
+}
+.checkbox{
+    margin-left: 15%;
+}
+.xiangmutupian{
+    margin-left: 15%;
+}
+
+.demo--label{margin:20px 20px 0 0;display:inline-block}
+.demo--radio{display:none}
+.demo--radioInput{background-color:#fff;border:1px solid rgba(0,0,0,0.15);border-radius:100%;display:inline-block;height:16px;margin-right:10px;margin-top:-1px;vertical-align:middle;width:16px;line-height:1}
+.demo--radio:checked + .demo--radioInput:after{background-color:#57ad68;border-radius:100%;content:"";display:inline-block;height:12px;margin:2px;width:12px}
+.demo--checkbox.demo--radioInput,.demo--radio:checked + .demo--checkbox.demo--radioInput:after{border-radius:0}
+
+
+
+.denglu{
+    text-align: center;
+   
+}
+/*.input input--haruki{
+    background-color: green;
+}*/
